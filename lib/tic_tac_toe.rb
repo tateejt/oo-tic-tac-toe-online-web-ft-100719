@@ -80,8 +80,6 @@ def won?
   WIN_COMBINATIONS.find{|win_combo| (@board[win_combo[0]] == @board[win_combo[1]]) && (@board[win_combo[2]] == @board[win_combo[0]]) && @board[win_combo[0]] != " "}
 end
 def full? 
-  WIN_COMBINATIONS.find{||
-
-
+  
 
 end
