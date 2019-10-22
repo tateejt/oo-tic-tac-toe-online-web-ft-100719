@@ -91,7 +91,6 @@ def draw?
   if !won?(@board) && full?(@board)
     true
   end
-  false
 end
 
 
