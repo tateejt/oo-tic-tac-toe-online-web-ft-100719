@@ -94,9 +94,9 @@ def draw?
   end
 end
 
-def over?(board)
+def over?
   puts 'is it over?'
-  if won?(board) || draw?(board) || full?(board)
+  if won?(@board) || draw?(@board) || full?(@board)
     return true
   else
     puts 'no keep going'
@@ -104,13 +104,13 @@ def over?(board)
   end
 end
 
-def winner(board)
-  if !won?(board)
+def winner
+  if !won?(@board)
     return nil
   else WIN_COMBINATIONS.each do |win_combo|
-    if check_win_combination?(board, 'X', win_combo)
+    if check_win_combination?(@board, 'X', win_combo)
       return 'X'
-    elsif check_win_combination?(board, 'O', win_combo)
+    elsif check_win_combination?(@board, 'O', win_combo)
       return 'O'
     end
   end
@@ -118,14 +118,14 @@ end
 end
 
 
-def play(board)
-  until over?(board) == true || won?(board) != false
+def play
+  until over?(@board) == true || won?(@board) != false
   puts 'turn'
-    turn(board)
+    turn(@board)
   end
-  if winner(board)
+  if winner(@board)
     puts "Congratulations!"
-  elsif draw?(board)
+  elsif draw?(@board)
     puts "Draw!"
   else
     return nil
