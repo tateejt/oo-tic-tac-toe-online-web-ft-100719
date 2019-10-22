@@ -83,7 +83,8 @@ def full?
   if @board.include?(" ") || @board.include("")
     false
   end
+  true
 end
-true
+
 
 end
