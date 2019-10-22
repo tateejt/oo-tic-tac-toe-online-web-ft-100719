@@ -104,7 +104,6 @@ def over?(board)
   end
 end
 
-#WHO WON?
 def winner(board)
   if !won?(board)
     return nil
